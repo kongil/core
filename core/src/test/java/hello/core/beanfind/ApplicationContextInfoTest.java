@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class ApplicationContext {
+public class ApplicationContextInfoTest {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
@@ -21,7 +21,7 @@ public class ApplicationContext {
     }
 
     @Test
-    @DisplayName("모든 빈 출력하기")
+    @DisplayName("애플리케이션 빈 출력하기")
     void findApplicationAllBean() {
         String[] beanDefinitionNames = ac.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
